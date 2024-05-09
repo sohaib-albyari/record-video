@@ -11,11 +11,15 @@ const stopRecordButton = document.getElementById("stopRecord");
 const pauseRecordButton = document.getElementById("pauseRecord");
 const playRecordButton = document.getElementById("playRecord");
 const downloadRecordButton = document.getElementById("downloadRecord");
+const videoOffButton = document.getElementById("camera");
+const microphoneOffButton = document.getElementById("microphone");
+
 const recordedVideo = document.createElement("video");
 const userIcon = document.querySelector(".userIcon");
 
 var mediaRecorder;
 var recordedChunks = [];
+let stream;
 
 const addBtn = `
 <button class="btn" onclick="playRecord()" id="playRecord">
@@ -73,7 +77,8 @@ btn.forEach((e, i) => {
 // Request access to the webcam and microphone
 navigator.mediaDevices
   .getUserMedia({ video: true, audio: true })
-  .then((stream) => {
+  .then((userStream) => {
+    stream = userStream;
     videoElement.srcObject = stream;
     mediaRecorder = new MediaRecorder(stream);
 
@@ -117,7 +122,23 @@ pauseRecordButton.addEventListener("click", () => {
   }
 });
 
-function download() {
+videoOffButton.addEventListener("click", () => {
+  if (imageSvg[3].classList.contains("stop")) {
+    turnOffCamera();
+  } else {
+    turnOnCamera();
+  }
+});
+
+microphoneOffButton.addEventListener("click", () => {
+  if (imageSvg[4].classList.contains("stop")) {
+    turnOffmicrophone();
+  } else {
+    turnOnmicrophone();
+  }
+});
+
+const download = () => {
   const blob = new Blob(recordedChunks, { type: "video/mp4" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -127,10 +148,9 @@ function download() {
   a.download = "recording.mp4";
   a.click();
   window.URL.revokeObjectURL(url);
-}
+};
 
-function playRecord() {
-  console.log(video_container);
+const playRecord = () => {
   const blob = new Blob(recordedChunks, { type: "video/mp4" });
   const url = URL.createObjectURL(blob);
   video_container.innerHTML = "";
@@ -142,6 +162,37 @@ function playRecord() {
     recordedVideo.style.display = "block";
     video_container.appendChild(recordedVideo);
   }
-}
+};
 
+const turnOffCamera = () => {
+  if (stream) {
+    stream.getVideoTracks().forEach((track) => {
+      track.enabled = false;
+    });
+  }
+};
+
+const turnOnCamera = () => {
+  if (stream) {
+    stream.getVideoTracks().forEach((track) => {
+      track.enabled = true;
+    });
+  }
+};
+
+const turnOffmicrophone = () => {
+  if (stream) {
+    stream.getAudioTracks().forEach((track) => {
+      track.enabled = false;
+    });
+  }
+};
+
+const turnOnmicrophone = () => {
+  if (stream) {
+    stream.getAudioTracks().forEach((track) => {
+      track.enabled = true;
+    });
+  }
+};
 // -----------------
