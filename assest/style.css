@@ -187,9 +187,34 @@ button {
     margin: 10% auto;
   }
 
-  .btns .btn,
-  .btns .btn_play_pause {
+  .btns .btn {
     width: 30%;
+  }
+
+  .btns .btn.btn2 {
+    width: 40%;
+  }
+
+  .btns .btn.btn2 img{
+    width: 15%;
+  }
+
+
+
+  .btns .btn_play_pause {
+    width: 20%;
+    justify-content: space-around;
+  }
+
+  .btns .btn_play_pause button {
+    width: 50%;
+    /* padding: 0; */
+  }
+
+  .btns .btn_play_pause img {
+    width: 90%;
+    /* padding: 6px; */
+    scale: 1;
   }
 
   .circle {

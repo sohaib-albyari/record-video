@@ -22,12 +22,12 @@ var recordedChunks = [];
 let stream;
 
 const addBtn = `
-<button class="btn" onclick="playRecord()" id="playRecord">
+<button class="btn btn2" onclick="playRecord()" id="playRecord">
         <img src="assest/image/icon/Play.svg" /><span class="text"
           >تشغيل التسجيل</span
         >
       </button>
-      <button class="btn" onclick="download()" id="downloadRecord">
+      <button class="btn btn2" onclick="download()" id="downloadRecord">
         <img src="assest/image/icon/download.svg" /><span class="text"
           >تنزيل التسجيل</span
         >
