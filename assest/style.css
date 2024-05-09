@@ -216,7 +216,7 @@ button {
 
   #video {
     width: 89%;
-    /* transform: translate(7%, 65%); */
+    transform: translate(7%, -11%);
   }
 }
 
