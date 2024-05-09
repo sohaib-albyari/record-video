@@ -205,6 +205,10 @@ button {
     margin: 10% auto;
   }
 
+  .video-container {
+    background-color: yellow;
+  }
+
   .video-container .userIcon {
     width: 50%;
     /* transform: translate(50%, 31%); */
