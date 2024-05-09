@@ -181,6 +181,10 @@ button {
 
 @media screen and (max-width: 768px) {
 
+  .video-container {
+    background-color: #fff;
+  }
+
   .video-container .userIcon {
     width: 48%;
     transform: translate(56%, 0%);
@@ -189,7 +193,7 @@ button {
   #video {
     width: 60%;
     transform: translate(6%, -11%);
-    background-color: #fff;
+
   }
 }
 
