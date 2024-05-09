@@ -165,7 +165,7 @@ button {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .video-container .userIcon {
     width: 48%;
@@ -173,7 +173,7 @@ button {
   }
 
   .circle {
-    margin-right: 12%;
+    margin-right: 16%;
   }
 
   #video {
