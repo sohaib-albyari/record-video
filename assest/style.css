@@ -100,13 +100,14 @@ button {
 
 .btns .btn_play_pause {
   width: 5em;
+  display: none;
 }
 
-.btns .btn:not(:first-child) {
+.btns .btn:not(:nth-child(2)) {
   width: 8em;
 }
 
-.btns .btn:not(:first-child) img {
+.btns .btn:not(:nth-child(2)) img {
   scale: 1;
 }
 
@@ -205,7 +206,11 @@ button {
     opacity: 0;
   }
 
-  100% {
+  50% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

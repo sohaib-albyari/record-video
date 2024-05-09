@@ -2,6 +2,7 @@ const frameeVideo = document.querySelector(".frameeVideo");
 const circle = document.querySelector(".circle");
 const btns = document.querySelectorAll(".btns button");
 const imageSvg = document.querySelectorAll(".btns button img");
+const btn_play_pause = document.querySelector(".btn_play_pause");
 const video_container = document.querySelector(".video-container");
 const videoElement = video_container.querySelector("#video");
 const startRecordButton = document.getElementById("start");
@@ -18,11 +19,8 @@ btns.forEach((e, i) => {
   e.addEventListener("click", () => {
     switch (e.id) {
       case "start":
-        imageSvg[i].src = "assest/image/icon/S_Camera.svg";
-        imageSvg[i].classList.toggle("stop");
-        if (!imageSvg[i].classList.contains("stop")) {
-          imageSvg[i].src = "assest/image/icon/Camera.svg";
-        }
+        e.style.display = "none";
+        btn_play_pause.style.display = "flex";
         break;
       case "startRecord":
         imageSvg[i].src = "assest/image/icon/Play.svg";
