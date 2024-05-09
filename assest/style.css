@@ -91,7 +91,7 @@ button {
 
 .btns .btn,
 .btns .btn_play_pause {
-  width: 8em;
+  width: 8%;
   height: 70%;
   padding: 0;
   margin: 3px;
@@ -104,18 +104,9 @@ button {
 }
 
 .btns .btn_play_pause {
-  width: 5em;
+  width: 5%;
   display: none;
 }
-
-.btns .btn:nth-child(1) {
-  width: 13em;
-}
-
-.btns .btn:nth-child(2) {
-  width: 11em;
-}
-
 
 
 .btns .btn img,
@@ -135,8 +126,7 @@ button {
 .btns .btn_play_pause button {
   background: none;
   border: none;
-  width: 8em;
-  /* padding: 0; */
+  width: 45%;
 }
 
 .btns .btn_play_pause img {
@@ -153,16 +143,12 @@ button {
   height: fit-content;
   color: var(--font);
   font-family: 'SST_Arabic_Roman';
-  font-size: 1.2em;
+  font-size: 15px;
   font-weight: bolder;
   /* align-self: center; */
   width: 70%;
   line-height: 1.8;
 }
-
-
-
-
 
 
 @media(max-width: 1920px) {
@@ -200,8 +186,9 @@ button {
     width: 90%;
     margin: 10% auto;
   }
-  .circle{
-    margin-right: 7%;
+
+  .circle {
+    margin: 0.5% 7% 0 0;
   }
 
   .video-container .userIcon {
