@@ -141,7 +141,7 @@ button {
 
 .btns .btn_play_pause img {
   width: 85%;
-  padding: 14% !important;
+  padding: 10%;
 }
 
 .btns .btn img.stop,
@@ -199,6 +199,9 @@ button {
     height: 21%;
     width: 90%;
     margin: 10% auto;
+  }
+  .circle{
+    margin-right: 7%;
   }
 
   .video-container .userIcon {
