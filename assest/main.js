@@ -71,24 +71,24 @@ navigator.mediaDevices
     console.error("Error accessing the webcam and microphone:", error);
   });
 
-// startRecordButton.addEventListener("click", () => {
-//   userIcon.style.display = "none";
-//   videoElement.style.display = "block";
-//   frameeVideo.style.backgroundImage = "url(assest/image/RFG.svg)";
-//   circle.style.backgroundColor = "var(--red)";
-//   document.body.style.backgroundImage = "none";
-//   // frameeVideo.classList.add("active");
-//   recordedChunks = [];
-//   mediaRecorder.start();
-//   startRecordButton.disabled = true;
-//   stopRecordButton.disabled = false;
-// });
+startRecordButton.addEventListener("click", () => {
+  userIcon.style.display = "none";
+  videoElement.style.display = "block";
+  frameeVideo.style.backgroundImage = "url(assest/image/RFG.svg)";
+  circle.style.backgroundColor = "var(--red)";
+  document.body.style.backgroundImage = "none";
+  // frameeVideo.classList.add("active");
+  recordedChunks = [];
+  mediaRecorder.start();
+  startRecordButton.disabled = true;
+  stopRecordButton.disabled = false;
+});
 
-// stopRecordButton.addEventListener("click", () => {
-//   mediaRecorder.stop();
-//   startRecordButton.disabled = false;
-//   stopRecordButton.disabled = true;
-// });
+stopRecordButton.addEventListener("click", () => {
+  mediaRecorder.stop();
+  // startRecordButton.disabled = false;
+  // stopRecordButton.disabled = true;
+});
 
 // downloadRecordButton.addEventListener("click", () => {
 //   const blob = new Blob(recordedChunks, { type: "video/mp4" });
