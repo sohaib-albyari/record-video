@@ -45,9 +45,12 @@ body {
   float: right;
   margin: 0.5% 16% 0 0;
   border-radius: 50%;
-  animation: circleRecord 4s infinite;
+  display: none;
 }
+ .circle.animation{
+  animation: circleRecord 2s infinite;
 
+ }
 .video-container {
   width: 70%;
   height: 70%;
