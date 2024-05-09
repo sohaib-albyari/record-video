@@ -28,14 +28,14 @@ body {
   margin: 3% 0 0 0;
   width: 100%;
   height: 80%;
-  background-image: url(image/RFW.svg);
+  /* background-image: url(image/RFW.svg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
 .frameeVideo.active {
-  background-image: url(image/RFG.svg);
+  background-image: url(image/RFW.svg);
 }
 
 .circle {
@@ -181,10 +181,6 @@ button {
 
 @media screen and (max-width: 768px) {
 
-  .video-container {
-    background-color: #fff;
-  }
-
   .video-container .userIcon {
     width: 48%;
     transform: translate(56%, 0%);
@@ -205,17 +201,13 @@ button {
     margin: 10% auto;
   }
 
-  .video-container {
-    background-color: yellow;
-  }
-
   .video-container .userIcon {
     width: 50%;
     /* transform: translate(50%, 31%); */
   }
 
   #video {
-    width: 89%;
+    width: 85%;
     transform: translate(7%, -11%);
   }
 }
