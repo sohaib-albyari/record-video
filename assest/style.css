@@ -201,7 +201,7 @@ button {
     margin: 10% auto;
   }
   .circle{
-    margin-right: 7%;
+    margin: 0.5% 7% 0 0;
   }
 
   .video-container .userIcon {
