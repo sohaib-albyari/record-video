@@ -189,6 +189,7 @@ button {
   #video {
     width: 60%;
     transform: translate(6%, -11%);
+    background-color: #fff;
   }
 }
 
