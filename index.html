@@ -18,19 +18,38 @@
       <div class="video-container">
         <img class="userIcon" src="assest/image/icon/user.svg" />
         <!-- <video id="video" src="assest/test.mp4" controls autoplay></video> -->
-        <video id="video" autoplay muted controls></video>
+        <video id="video" autoplay muted></video>
       </div>
     </div>
 
-      <div class="btns">
-        <button id="startRecord">بدء التسجيل</button>
-        <button id="playRecord">تشغيل التسجيل</button>
+    <div class="btns">
+      <!-- <div class="btn_play_pause">
+        <button id="stopRecord">
+          <img src="assest/image/icon/stop.svg" />
+        </button>
+        <button id="startRecord">
+          <img src="assest/image/icon/pause.svg" />
+        </button>
+      </div> -->
+      <button class="btn" id="start">
+        <img src="assest/image/icon/recording.svg" /><span class="text"
+          >بدء التشغيل</span
+        >
+      </button>
+      <button class="btn" id="camera">
+        <img src="assest/image/icon/Camera.svg" /><span class="text"
+          >الكاميرا</span
+        >
+      </button>
+      <button class="btn" id="microphone">
+        <img src="assest/image/icon/Microphone.svg" /><span class="text"
+          >المايك</span
+        >
+      </button>
+      <!-- <button id="playRecord">تشغيل التسجيل</button>
         <button id="stopRecord">إيقاف التسجيل</button>
-        <button id="downloadRecord">تحميل الفيديو</button>
-        <!-- <button onClick="recordStream()">Record camera</button>
-        <button onClick="recordScreenAndAudio()">Record Screen and audio</button>
-        <button onClick="stopRecording()">Stop!</button> -->
-      </div>
+        <button id="downloadRecord">تحميل الفيديو</button> -->
+    </div>
     <script src="assest/main.js"></script>
   </body>
 </html>
