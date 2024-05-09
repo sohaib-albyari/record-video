@@ -1,3 +1,4 @@
+const frameeVideo = document.querySelector(".frameeVideo");
 const video_container = document.querySelector(".video-container");
 const videoElement = video_container.querySelector("#video");
 const startRecordButton = document.getElementById("startRecord");
@@ -31,6 +32,8 @@ navigator.mediaDevices
 startRecordButton.addEventListener("click", () => {
   userIcon.style.display = "none";
   videoElement.style.display = "block";
+  console.log(frameeVideo);
+  frameeVideo.style.backgroundImage = "url('image/RFG.svg')";
   recordedChunks = [];
   mediaRecorder.start();
   startRecordButton.disabled = true;

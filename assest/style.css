@@ -12,6 +12,19 @@ body {
   background-size: cover;
 }
 
+.frameeVideo {
+  width: 100%;
+  height: 100%;
+  background-image: url('image/RFW.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* .frameeVideo.active {
+  background-image: url('image/RFG.svg');
+} */
+
 .video-container {
   width: 100%;
   height: 70%;
@@ -55,15 +68,15 @@ body {
 
 @media(max-width: 1920px) {
   .video-container .userIcon {
-    width: 22% !important;
-    transform: translate(178%, 9%) !important;
+    width: 22%;
+    transform: translate(178%, 9%);
   }
 }
 
 @media screen and (min-width: 992px) {
   .video-container .userIcon {
-    width: 22% !important;
-    transform: translate(178%, 9%) !important;
+    width: 22%;
+    transform: translate(178%, 9%);
   }
 }
 
