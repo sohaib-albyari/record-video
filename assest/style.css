@@ -186,12 +186,13 @@ button {
     width: 90%;
     margin: 10% auto;
   }
-<<<<<<< HEAD
+
+  .btns .btn,
+  .btns .btn_play_pause {
+    width: 30%;
+  }
 
   .circle {
-=======
-  .circle{
->>>>>>> a7a3c71009afe174c05a92337370e2553d15cfd9
     margin: 0.5% 7% 0 0;
   }
 
