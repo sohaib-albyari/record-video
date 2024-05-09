@@ -110,7 +110,7 @@ startRecordButton.addEventListener("click", () => {
 stopRecordButton.addEventListener("click", () => {
   circle.style.backgroundColor = "var(--red)";
   circle.classList.remove("animation");
-  mediaRecordذer.stop();
+  mediaRecorder.stop();
 });
 
 pauseRecordButton.addEventListener("click", () => {
