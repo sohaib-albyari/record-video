@@ -47,10 +47,12 @@ body {
   border-radius: 50%;
   display: none;
 }
- .circle.animation{
+
+.circle.animation {
   animation: circleRecord 2s infinite;
 
- }
+}
+
 .video-container {
   width: 70%;
   height: 70%;
@@ -109,6 +111,7 @@ button {
 .btns .btn:nth-child(1) {
   width: 13em;
 }
+
 .btns .btn:nth-child(2) {
   width: 11em;
 }
@@ -185,7 +188,7 @@ button {
 
   #video {
     width: 60%;
-    /* transform: translate(6%, 23%); */
+    transform: translate(6%, -11%);
   }
 }
 
