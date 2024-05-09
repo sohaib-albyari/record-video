@@ -34,7 +34,7 @@ startRecordButton.addEventListener("click", () => {
   videoElement.style.display = "block";
   console.log(frameeVideo);
   frameeVideo.style.backgroundImage = "url(assest/image/RFG.svg)";
-  // document.body.style.backgroundImage = "none";
+  document.body.style.backgroundImage = "none";
   // frameeVideo.classList.add("active");
   recordedChunks = [];
   mediaRecorder.start();
