@@ -19,7 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(image/background.svg);
+  background-image: url(image/background.png);
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -52,6 +52,16 @@ body {
 .circle.animation {
   animation: circleRecord 2s infinite;
 
+}
+
+#current-time {
+  float: right;
+  width: fit-content;
+  position: relative;
+  top: 7%;
+  right: -7%;
+  color: #fff;
+  font-family: SST_Arabic_Roman;
 }
 
 .video-container {

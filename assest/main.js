@@ -218,9 +218,7 @@ function updateCurrentTime() {
     const duration = Date.now() - startTime;
     const minutes = Math.floor(duration / 60000);
     const seconds = ((duration % 60000) / 1000).toFixed(0);
-    currentTimeDisplay.textContent = `Current Time: ${minutes}:${
-      seconds < 10 ? "0" : ""
-    }${seconds}`;
+    currentTimeDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 }
 
