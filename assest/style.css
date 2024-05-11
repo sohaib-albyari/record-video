@@ -22,6 +22,7 @@ body {
   background-image: url(image/background.svg);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .frameeVideo {

@@ -21,6 +21,12 @@ var mediaRecorder;
 var recordedChunks = [];
 let stream;
 
+const currentTimeDisplay = document.getElementById("current-time");
+let isRecording = false;
+let startTime = null;
+let pausedTime = 0;
+let isPaused = false;
+
 const addBtn = `
 <button class="btn btn2" onclick="playRecord()" id="playRecord">
         <img src="assest/image/icon/Play.svg" /><span class="text"
@@ -103,25 +109,34 @@ startRecordButton.addEventListener("click", () => {
   // frameeVideo.classList.add("active");
   recordedChunks = [];
   mediaRecorder.start();
-  startRecordButton.disabled = true;
-  stopRecordButton.disabled = false;
+  isRecording = true;
+  startTime = Date.now();
 });
 
 stopRecordButton.addEventListener("click", () => {
   circle.style.backgroundColor = "var(--red)";
   circle.classList.remove("animation");
+  if (!isRecording) return;
   mediaRecorder.stop();
+  isRecording = false;
 });
 
 pauseRecordButton.addEventListener("click", () => {
   circle.classList.toggle("animation");
   if (imageSvg[1].classList.contains("stop")) {
     mediaRecorder.pause();
+    pausedTime = Date.now();
+    isPaused = true;
     circle.style.backgroundColor = "var(--red)";
   } else {
+    const deltaTime = Date.now() - pausedTime;
+    startTime += deltaTime;
     mediaRecorder.resume();
+    isPaused = false;
     circle.style.backgroundColor = "var(--green)";
   }
+
+  if (!isRecording) return;
 });
 
 videoOffButton.addEventListener("click", () => {
@@ -198,3 +213,15 @@ const turnOnmicrophone = () => {
   }
 };
 // -----------------
+function updateCurrentTime() {
+  if (isRecording && !isPaused) {
+    const duration = Date.now() - startTime;
+    const minutes = Math.floor(duration / 60000);
+    const seconds = ((duration % 60000) / 1000).toFixed(0);
+    currentTimeDisplay.textContent = `Current Time: ${minutes}:${
+      seconds < 10 ? "0" : ""
+    }${seconds}`;
+  }
+}
+
+setInterval(updateCurrentTime, 1000);
