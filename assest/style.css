@@ -48,7 +48,7 @@ body {
 
 .circle {
   width: 3%;
-  height: 9%;
+  height: 8%;
   background-color: var(--green);
   float: right;
   border-radius: 50%;
