@@ -11,7 +11,8 @@
 
 * {
   box-sizing: border-box;
-
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -47,9 +48,9 @@ body {
   position: absolute;
 }
 
-.frameeVideo.active {
+/* .frameeVideo.active {
   background-image: url(image/RFW.svg);
-}
+} */
 
 .circle {
   width: 4%;
@@ -96,7 +97,7 @@ body {
 #video {
   padding: 0;
   width: 50%;
-  padding: 6%;
+  /* padding: 6%; */
   display: none;
   margin: auto;
 }
