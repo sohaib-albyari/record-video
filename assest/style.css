@@ -79,9 +79,10 @@ body {
 .video-container {
   width: 70%;
   /* height: 100%; */
+  top: 50%;
   left: 50%;
   position: relative;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .video-container .userIcon {
@@ -96,9 +97,9 @@ body {
   width: 60%;
   display: none;
   position: relative;
-  top: -15%;
+  /* top: -15%; */
   left: 50%;
-  transform: translate(-50%, 15%);
+  transform: translate(-50%, 0);
 
 }
 
