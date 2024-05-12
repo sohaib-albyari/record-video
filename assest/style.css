@@ -9,10 +9,15 @@
   src: url(font/SST_Arabic_Roman.ttf);
 }
 
+* {
+  box-sizing: content-box;
+
+}
 
 html {
   height: 100vh;
   width: 100vw;
+
 }
 
 body {
@@ -23,14 +28,15 @@ body {
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+.container-fluid {
+  height: 100%;
 }
 
 .frameeVideo {
-  margin: 3% 0 0 0;
   width: 100%;
-  height: 80%;
-  /* background-image: url(image/RFW.svg); */
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -45,9 +51,12 @@ body {
   height: 7%;
   background-color: var(--green);
   float: right;
-  margin-right: 16%;
   border-radius: 50%;
   display: none;
+  position: relative;
+  top: 3%;
+  right: 18%;
+  transform: translate(-3%, -18%);
 }
 
 .circle.animation {
@@ -59,30 +68,35 @@ body {
   float: right;
   width: fit-content;
   position: relative;
-  top: 7%;
-  right: -7%;
+  top: 9%;
+  right: 11%;
   color: #fff;
   font-family: SST_Arabic_Roman;
+  transform: translate(-9%, -11%);
+  display: none;
 }
 
 .video-container {
   width: 70%;
-  height: 70%;
-  /* background: red; */
+  height: 100%;
   margin: auto;
-  transform: translateY(20%);
 }
 
 .video-container .userIcon {
-  width: 25%;
-  transform: translate(152%, 31%);
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #video {
-  width: 43%;
+  width: 60%;
   display: none;
-  transform: translate(68%, 2%);
-  aspect-ratio: 12 / 9;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
@@ -92,31 +106,30 @@ button {
 .btns {
   direction: rtl;
   width: 100%;
-  height: 5%;
+  max-height: 3rem;
+  height: 3rem;
   display: flex;
-  margin: 3% auto 0;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1%;
 }
 
 .btns .btn,
 .btns .btn_play_pause {
-  width: 8%;
-  height: 70%;
-  padding: 0;
-  margin: 3px;
+  width: 100%;
+  max-width: 100%;
+  height: 90% !important;
   background-color: #fff;
   border: none;
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
 }
 
-.btns .btn_play_pause {
-  width: 5%;
+.btns .btns_play_pause {
   display: none;
 }
 
@@ -124,16 +137,12 @@ button {
 .btns .btn img,
 .btns .btn_play_pause img {
   background-color: var(--green);
-  width: 20%;
-  align-self: center;
-  padding: 2%;
+  height: 1.5rem;
+  padding: 0.1rem;
   border-radius: 50%;
-  scale: 0.8;
 }
 
-.btns .btn:first-child img {
-  scale: 0.7;
-}
+
 
 .btns .btn_play_pause button {
   background: none;
@@ -141,10 +150,6 @@ button {
   width: 45%;
 }
 
-.btns .btn_play_pause img {
-  width: 85%;
-  padding: 10%;
-}
 
 .btns .btn img.stop,
 .btns .btn_play_pause img.stop {
@@ -163,92 +168,9 @@ button {
 }
 
 
-@media(max-width: 1920px) {
+@media (max-width: 430px) {
   .video-container .userIcon {
     width: 22%;
-    transform: translate(178%, 9%);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .video-container .userIcon {
-    width: 22%;
-    transform: translate(178%, 9%);
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  .video-container .userIcon {
-    width: 48%;
-    transform: translate(56%, 0%);
-  }
-
-  .circle {
-    margin-right: 16%;
-  }
-
-  #video {
-    width: 60%;
-    transform: translate(6%, -11%);
-
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-  .frameeVideo {
-    height: 21%;
-    width: 90%;
-    margin: 10% auto;
-  }
-
-  .btns .btn {
-    width: 30%;
-  }
-
-  .btns .btn.btn2 {
-    width: 40%;
-  }
-
-  .btns .btn.btn2 img {
-    width: 15%;
-  }
-
-
-
-  .btns .btn_play_pause {
-    width: 20%;
-    justify-content: space-around;
-  }
-
-  .btns .btn_play_pause button {
-    width: 45%;
-    /* padding: 0; */
-  }
-
-  .btns .btn_play_pause img {
-    max-width: 85%;
-    /* padding: 6px; */
-    scale: 1;
-  }
-
-  .btns .btn .text {
-    line-height: 1.6;
-  }
-
-  .circle {
-    margin-right: 10%;
-  }
-
-  .video-container .userIcon {
-    width: 50%;
-    /* transform: translate(50%, 31%); */
-  }
-
-  #video {
-    width: 85%;
-    transform: translate(7%, -11%);
   }
 }
 

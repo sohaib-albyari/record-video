@@ -3,7 +3,7 @@ const circle = document.querySelector(".circle");
 const btns = document.querySelector(".btns");
 const btn = document.querySelectorAll(".btns button");
 const imageSvg = document.querySelectorAll(".btns button img");
-const btn_play_pause = document.querySelector(".btn_play_pause");
+const btn_play_pause = document.querySelector(".btns_play_pause");
 const video_container = document.querySelector(".video-container");
 const videoElement = video_container.querySelector("#video");
 const startRecordButton = document.getElementById("start");
@@ -28,24 +28,39 @@ let pausedTime = 0;
 let isPaused = false;
 
 const addBtn = `
-<button class="btn btn2" onclick="playRecord()" id="playRecord">
-        <img src="assest/image/icon/Play.svg" /><span class="text"
-          >تشغيل التسجيل</span
-        >
-      </button>
-      <button class="btn btn2" onclick="download()" id="downloadRecord">
-        <img src="assest/image/icon/download.svg" /><span class="text"
-          >تنزيل التسجيل</span
-        >
-      </button>
+<div class="col-xl-2 col-md-4 col-5">
+            <button class="btn btn2 p-0" onclick="playRecord()" id="playRecord">
+              <div class="row w-100">
+                <div class="col-3 p-0">
+                  <img src="assest/image/icon/Play.svg" />
+                </div>
+                <div class="col-6 w-75 p-0">
+                  <span class="text">تشغيل التسجيل</span>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col-xl-2 col-md-4 col-5">
+            <button class="btn btn2 p-0" onclick="download()" id="downloadRecord">
+              <div class="row w-100">
+                <div class="col-3 p-0">
+                  <img src="assest/image/icon/download.svg" />
+                </div>
+                <div class="col-6 w-75 p-0">
+                  <span class="text">تنزيل التسجيل</span>
+                </div>
+              </div>
+            </button>
+          </div>
 `;
 
 btn.forEach((e, i) => {
   e.addEventListener("click", () => {
     switch (e.id) {
       case "start":
-        e.style.display = "none";
+        e.parentElement.style.display = "none";
         btn_play_pause.style.display = "flex";
+        currentTimeDisplay.style.display = "block";
         break;
       case "pauseRecord":
         imageSvg[i].src = "assest/image/icon/Play.svg";
@@ -218,7 +233,9 @@ function updateCurrentTime() {
     const duration = Date.now() - startTime;
     const minutes = Math.floor(duration / 60000);
     const seconds = ((duration % 60000) / 1000).toFixed(0);
-    currentTimeDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    currentTimeDisplay.textContent = `${minutes}:${
+      seconds < 10 ? "0" : ""
+    }${seconds}`;
   }
 }
 
