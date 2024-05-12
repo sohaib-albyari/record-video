@@ -103,7 +103,6 @@ navigator.mediaDevices
     videoElement.srcObject = stream;
     mediaRecorder = new MediaRecorder(stream);
 
-    // console.log(mediaRecorder);
     mediaRecorder.ondataavailable = (event) => {
       if (event.data.size > 0) {
         recordedChunks.push(event.data);
@@ -120,8 +119,6 @@ startRecordButton.addEventListener("click", () => {
   video_container.style.backgroundImage = "url(assest/image/RFW.svg)";
   circle.style.backgroundColor = "var(--green)";
   circle.style.display = "block";
-  // document.body.style.backgroundImage = "none";
-  // frameeVideo.classList.add("active");
   recordedChunks = [];
   mediaRecorder.start();
   isRecording = true;
