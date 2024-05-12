@@ -20,20 +20,22 @@
     />
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row w-100">
-        <div class="col-12">
+    <div class="container-fluid p-0 m-0">
+      <div class="row p-0 m-0 w-100">
+        <div class="col-12 p-0" style="display: flex; flex-direction: column">
           <div class="frameeVideo">
             <div class="circle animation"></div>
-            <p id="current-time">0:00</p>
-            <div class="video-container">
-              <img class="userIcon" src="assest/image/icon/user.svg" />
-              <video id="video" autoplay muted></video>
+            <div class="text">
+              <p id="current-time">0:00</p>
             </div>
+          </div>
+          <div class="video-container">
+            <img class="userIcon" src="assest/image/icon/user.svg" />
+            <video id="video" autoplay muted></video>
           </div>
         </div>
       </div>
-      <div class="row m-0 mt-5 align-items-end fs-2">
+      <div class="row m-0 p-0 mt-5 align-items-end fs-2">
         <div class="btns">
           <div class="col-xl-1 col-3 btns_play_pause">
             <div class="btn_play_pause">
@@ -92,9 +94,6 @@
               </div>
             </button>
           </div>
-
-          
-
         </div>
       </div>
     </div>

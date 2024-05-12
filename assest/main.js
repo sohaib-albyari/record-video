@@ -117,7 +117,7 @@ navigator.mediaDevices
 startRecordButton.addEventListener("click", () => {
   userIcon.style.display = "none";
   videoElement.style.display = "block";
-  frameeVideo.style.backgroundImage = "url(assest/image/RFW.svg)";
+  video_container.style.backgroundImage = "url(assest/image/RFW.svg)";
   circle.style.backgroundColor = "var(--green)";
   circle.style.display = "block";
   // document.body.style.backgroundImage = "none";
